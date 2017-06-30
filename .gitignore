@@ -3,3 +3,7 @@
 /.git/
 /.idea/
 /node_modules/
+/npm-debug.log
+/dbconnect.js
+/mailConfig.js
+/jwtKey.js
