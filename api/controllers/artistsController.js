@@ -16,7 +16,7 @@ exports.get_artists = function(req, res) {
         if (err || !artists || !artists.length) {
             return res.sendStatus(404);
         } else {
-            return res.json({"artists": artists});
+            return res.json(artists);
         }
 
     });
