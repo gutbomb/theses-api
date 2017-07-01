@@ -55,7 +55,7 @@ exports.get_albums = function(req, res) {
 
         (function iterate(i) {
             if (i === count) {
-                return res.json({"albums": albums});
+                return res.json(albums);
             }
 
             var album = albums[i];
