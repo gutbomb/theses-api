@@ -6,6 +6,8 @@ var jwt = require('jsonwebtoken');
 var jwtKey = require('../../jwtKey.js');
 var verifyToken = require('../../verifyToken.js');
 
+// added a comment here!!!
+
 exports.get_users = function(req, res) {
     var whereClause='';
     if (typeof(req.params)!=='undefined'){
