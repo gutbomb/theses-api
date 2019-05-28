@@ -73,7 +73,7 @@ module.exports = function(app) {
 
     app.route('/api/year')
     .get(yearsController.get_years);
-
+    
     app.route('/api/year/:yearId')
     .get(yearsController.get_years);
 
