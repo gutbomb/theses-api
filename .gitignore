@@ -3,6 +3,7 @@
 /.git/
 /.idea/
 /node_modules/
+/daemon/
 /npm-debug.log
 /dbconnect.js
 /mailConfig.js
