@@ -8,3 +8,4 @@
 /dbconnect.js
 /mailConfig.js
 /jwtKey.js
+/appConfig.js
