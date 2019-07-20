@@ -1,8 +1,15 @@
 var express = require('express'),
+    https = require('https'),
+    fs = require('fs'),
+    appConfig = require('./appConfig.js'),
     app = express(),
     port = process.env.PORT || 3001,
     bodyParser = require('body-parser'),
-    bearerToken = require('express-bearer-token');
+    bearerToken = require('express-bearer-token'),
+    sslOptions = {
+        key: fs.readFileSync(appConfig.sslOptions.key),
+	cert: fs.readFileSync(appConfig.sslOptions.cert)
+    };
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -18,6 +25,11 @@ app.use(bearerToken());
 var routes = require('./api/routes/theSetApiRoutes');
 routes(app);
 
-app.listen(port);
+if(appConfig.sslOptions.useSSL) {
+	https.createServer(sslOptions, app).listen(port);
+	console.log('secure theSet RESTful API server started on: ' + port);
+} else {
+	app.listen(port);
+	console.log('theSet RESTful API server started on: ' + port);
+}
 
-console.log('theSet RESTful API server started on: ' + port);
