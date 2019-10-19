@@ -27,9 +27,9 @@ routes(app);
 
 if(appConfig.sslOptions.useSSL) {
 	https.createServer(sslOptions, app).listen(port);
-	console.log('secure theSet RESTful API server started on: ' + port);
+	console.log('secure theSet API server started on: ' + port);
 } else {
 	app.listen(port);
-	console.log('theSet RESTful API server started on: ' + port);
+	console.log('theSet API server started on: ' + port);
 }
 
