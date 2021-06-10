@@ -9,7 +9,7 @@
     "express": "^4.15.3",
     "express-bearer-token": "^2.1.0",
     "jsonwebtoken": "^7.4.1",
-    "locutus": "^2.0.9",
+    "locutus": "^2.0.15",
     "mysql": "^2.13.0",
     "nodemailer": "^4.0.1",
     "password-hash": "^1.2.2",
